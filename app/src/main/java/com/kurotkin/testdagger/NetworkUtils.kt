@@ -1,4 +1,4 @@
 package com.kurotkin.testdagger
 
-class NetworkUtils {
+class NetworkUtils(val httpClient: HttpClient) {
 }

@@ -1,4 +1,7 @@
 package com.kurotkin.testdagger
 
-class DatabaseHelper {
+import javax.inject.Inject
+
+class DatabaseHelper(var nameText: String) {
+    fun getString() = nameText
 }
