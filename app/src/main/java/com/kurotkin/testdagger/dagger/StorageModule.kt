@@ -9,16 +9,16 @@ import javax.inject.Named
 @Module
 class StorageModule {
 
-    //@Named("prod")
+    @Named("prod")
     //@DatabaseProd
     @Provides
-    fun provideDatabaseHelper(): DatabaseHelper {
-        return DatabaseHelper("DatabaseHelper")
+    fun provideDatabaseHelperProd(): DatabaseHelper {
+        return DatabaseHelper("prod")
     }
 
-    //@Named("test")
-//    @Provides
-//    fun provideDatabaseHelperTest(): DatabaseHelper {
-//        return DatabaseHelper("test")
-//    }
+    @Named("test")
+    @Provides
+    fun provideDatabaseHelperTest(): DatabaseHelper {
+        return DatabaseHelper("test")
+    }
 }

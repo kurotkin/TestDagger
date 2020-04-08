@@ -10,7 +10,7 @@ import javax.inject.Named
 
 class MainActivity : AppCompatActivity() {
 
-    //@Named("prod")
+    @field:Named("prod")
     @Inject
     //@DatabaseProd
     lateinit var databaseHelper: DatabaseHelper
